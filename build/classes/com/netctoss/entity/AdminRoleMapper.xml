@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ 
+<mapper namespace="com.netctoss.dao.AdminRoleDao">
+	<sql id="feilds">
+		admin_id,
+		role_id
+	</sql>
+	
+	<!-- 删除管理员对应的角色的方法 -->
+	<delete id="deleteByAdminId" parameterType="java.lang.Integer">
+		DELETE FROM admin_role WHERE admin_id = #{id}
+	</delete>
+	
+	<!-- 保存管理员角色的方法 -->
+	<insert id="insertAdminRole" parameterType="com.netctoss.entity.AdminRole">
+		INSERT INTO admin_role
+			(
+				<include refid="feilds"/>
+			)
+		VALUES(
+			#{admin_id},
+			#{role_id}
+		)
+	</insert>
+	
+	<!-- 批量 保存管理员角色的方法 -->
+	<insert id="saveAdminRole" parameterType="java.util.List" >
+   		INSERT INTO admin_role(admin_id,role_id) VALUES
+		<foreach collection="list" item="adminRole" separator=",">
+			(#{adminRole.admin_id},#{adminRole.role_id})
+		</foreach>
+	</insert>
+</mapper>

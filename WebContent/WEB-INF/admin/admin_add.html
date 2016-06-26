@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>达内－NetCTOSS</title>
+        <link type="text/css" rel="stylesheet" media="all" href="../styles/global.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="../styles/global_color.css" />
+        
+        <script type="text/javascript" src="../js/jQuery/jquery-1.10.0.js"></script>
+        <script type="text/javascript" src="../js/jQuery/jquery.validate-1.13.1.js"></script>
+        <script type="text/javascript" src="../js/validate/myValidate.js"></script>
+        <script type="text/javascript" src="../js/admin/adminCommen.js"></script>
+        <script type="text/javascript" src="../js/admin/adminAdd.js"></script>
+        <script type="text/javascript">
+       
+        </script>
+    </head>
+    <body>
+        <!--Logo区域开始-->
+        <div id="header">
+            <img src="../images/logo.png" alt="logo" class="left"/>
+            <a href="#">[退出]</a>            
+        </div>
+        <!--Logo区域结束-->
+        <!--导航区域开始-->
+        <div id="navi">
+            <ul id="menu">
+            </ul>
+        </div>
+        <!--导航区域结束-->
+        <!--主要区域开始-->
+        <div id="main">            
+            <div id="save_result_info" class="save_success">保存成功！</div>
+            <form id="main_form" action="" method="post" class="main_form">
+                    <div class="text_info clearfix"><span>姓名：</span></div>
+                    <div class="input_info">
+                        <input id="name_input" name="name_input" type="text" required="required" />
+                        <span class="required">*</span>
+                        <div id="name_msg_div" class="validate_msg_medium"></div>
+                    </div>
+                    <div class="text_info clearfix"><span>管理员账号：</span></div>
+                    <div class="input_info">
+                        <input id="code_input" name="code_input" type="text" required="required"  />
+                        <span class="required">*</span>
+                        <div id="code_msg_div" class="validate_msg_medium"></div>
+                    </div>
+                    <div class="text_info clearfix"><span>密码：</span></div>
+                    <div class="input_info">
+                        <input id="pasword_input" name="pasword_input"  type="password" required="required" />
+                        <span class="required">*</span>
+                        <div id="pass_msg_div" class="validate_msg_medium"></div>
+                    </div>
+                    <div class="text_info clearfix"><span>重复密码：</span></div>
+                    <div class="input_info">
+                        <input id="re_pass_input" name="re_pass_input" type="password" required="required"  />
+                        <span class="required">*</span>
+                        <div id="re_pass_div" class="validate_msg_medium"></div>
+                    </div>      
+                    <div class="text_info clearfix"><span>电话：</span></div>
+                    <div class="input_info">
+                        <input id="phone_input" name="phone_input" type="text" class="width200" required="required" />
+                        <span class="required">*</span>
+                        <div id="phone_msg_div" class="validate_msg_medium"></div>
+                    </div>
+                    <div class="text_info clearfix"><span>Email：</span></div>
+                    <div class="input_info">
+                        <input id="email_input" name="email_input" type="text" class="width200" required="required" />
+                        <span class="required">*</span>
+                        <div id="email_msg_div" class="validate_msg_medium"></div>
+                    </div>
+                    <div class="text_info clearfix"><span>角色：</span></div>
+                    <div class="input_info_high">
+                        <div class="input_info_scroll">
+                            <ul id="roles_ul" >
+                            </ul>
+                        </div>
+                        <span class="required">*</span>
+                        <div class="validate_msg_tiny error_msg">至少选择一个</div>
+                    </div>
+                    <div class="button_info clearfix">
+                        <input type="button" value="保存" class="btn_save" onclick="addAdmin();" />
+                        <input type="button" value="取消" class="btn_save" onclick="history.back();"/>
+                    </div>
+                </form>  
+        </div>
+        <!--主要区域结束-->
+        <div id="footer">
+            <span>[源自北美的技术，最优秀的师资，最真实的企业环境，最适用的实战项目]</span>
+            <br />
+            <span>版权所有(C)加拿大达内IT培训集团公司 </span>
+        </div>
+    </body>
+</html>

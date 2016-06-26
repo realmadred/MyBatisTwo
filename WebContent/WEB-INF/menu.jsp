@@ -1,0 +1,11 @@
+<%@page pageEncoding="UTF-8" %> 
+<li><a href="/NetctossOne/toHome.do" class="index_on"></a></li>
+<li><a href="/NetctossOne/toRole.do" class="role_off"></a></li>
+<li><a href="/NetctossOne/toAdmin.do" class="admin_off"></a></li>
+<li><a href="/NetctossOne/toCost.do" class="fee_off"></a></li>
+<li><a href="/NetctossOne/toAccount.do" class="account_off"></a></li>
+<li><a href="/NetctossOne/toService.do" class="service_off"></a></li>
+<li><a href="/NetctossOne/toBill.do" class="bill_off"></a></li>
+<li><a href="/NetctossOne/toReport.do" class="report_off"></a></li>
+<li><a href="/NetctossOne/toUser.do" class="information_off"></a></li>
+<li><a href="/NetctossOne/toPassword.do" class="password_off"></a></li>
